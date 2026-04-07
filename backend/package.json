@@ -1,0 +1,26 @@
+{
+  "name": "lazyman",
+  "version": "1.0.0",
+  "author": "druxvh",
+  "main": "index.js",
+  "dependencies": {
+    "@nut-tree-fork/nut-js": "^4.2.6",
+    "express": "^5.2.1",
+    "qrcode-terminal": "^0.12.0",
+    "socket.io": "^4.8.3"
+  },
+  "description": "Control your PC from your phone - wireless mouse and keyboard",
+  "keywords": [
+    "remote-control",
+    "mouse",
+    "keyboard",
+    "socketio",
+    "lazyman"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "start": "bun index.js",
+    "dev": "bun --watch index.js"
+  },
+  "type": "module"
+}
