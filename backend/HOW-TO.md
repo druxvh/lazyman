@@ -17,12 +17,12 @@ Lazyman relies on a direct link between your phone and your PC. Because this app
 ## 🚀 How to Start
 
 ###  Windows
-1.  Open the `server` folder.
+1.  Open the `backend` folder.
 2.  Double-click `start.bat`.
 3.  **First Run?** A "Windows Firewall" popup will appear. **You must check "Private Networks" and click "Allow Access"** or your phone won't be able to find your PC.
 
 ###  macOS/Linux
-1.  Open your terminal in the `server` folder.
+1.  Open your terminal in the `backend` folder.
 2.  Run the command: `chmod +x start.sh`
 3.  Execute it: `./start.sh`
 
@@ -69,7 +69,7 @@ Since Lazyman moves your physical mouse, the Operating System needs to know you 
 | :--- | :--- |
 | **Phone won't connect** | Double-check that your phone is on the same Wi-Fi. Check if Windows Firewall is blocking Port 6006. |
 | **Mouse is jittery** | Ensure you are using `setPosition` in the logic (standard in v1.0). Check your Wi-Fi signal strength. |
-| **QR Code doesn't appear** | Ensure you ran `bun install` inside the server folder first. |
+| **QR Code doesn't appear** | Ensure you ran `bun install` inside the backend folder first. |
 | **"Permission Denied"** | On Linux/Mac, run `chmod +x start.sh` in the terminal. |
 
 ---

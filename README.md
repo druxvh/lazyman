@@ -47,8 +47,7 @@ Whether you're presenting a slide deck, watching movies from bed, or just being 
 
 ## 📖 Detailed Guides
 
-* [How to Setup & Use (Server)](/server/HOW-TO.md) — Step-by-step for all OS types.
-* [Developer Docs](/client/README.md) — How to modify the frontend.
+* [How to Setup & Use (Server)](/backend/HOW-TO.md) — Step-by-step for all OS types.
 
 ---
 
