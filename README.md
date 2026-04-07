@@ -38,7 +38,7 @@ Whether you're presenting a slide deck, watching movies from bed, or just being 
 
 1.  **Requirement**: Ensure [Bun](https://bun.sh) is installed on your computer.
 2.  **Download**: Clone or download the Lazyman folder.
-3.  **Run**: Navigate to the `server` folder and run `start.bat` (Windows) or `start.sh` (Mac/Linux).
+3.  **Run**: Navigate to the `backend` folder and run `start.bat` (Windows) or `start.sh` (Mac/Linux).
 4.  **Connect**: Scan the QR code in your terminal with your phone.
 
 > **Port Note**: Lazyman operates on port **6006**. Ensure your firewall allows local traffic on this port.
