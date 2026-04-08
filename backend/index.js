@@ -1,7 +1,7 @@
 import e from 'express'
 import { createServer } from 'http'
 import { Server } from 'socket.io'
-import { Button, mouse, Point, screen, keyboard } from '@nut-tree-fork/nut-js'
+import { Button, mouse, Point, screen, keyboard, Key } from '@nut-tree-fork/nut-js'
 import { networkInterfaces } from 'os'
 import { fileURLToPath } from 'url'
 import path from 'path'
@@ -79,7 +79,6 @@ io.on("connection", (socket) => {
         }
     })
 
-    // handle left click
     socket.on('mouse-click', async ({ button = 'left' }) => {
         try {
             const mouseButton = button === 'left' ? Button.LEFT : Button.RIGHT
@@ -89,7 +88,6 @@ io.on("connection", (socket) => {
         }
     })
 
-    // mouse scroll
     socket.on('mouse-scroll', async ({ direction, amount = 1 }) => {
         try {
 
@@ -117,6 +115,16 @@ io.on("connection", (socket) => {
             await keyboard.type(text);
         } catch (error) {
             console.error('Keyboard typing error: ', error);
+        }
+    });
+
+    socket.on('keyboard-key', async ({ key }) => {
+        try {
+            if (key === 'Enter') await keyboard.type(Key.Enter);
+            else if (key === 'Esc') await keyboard.type(Key.Escape);
+            else return
+        } catch (error) {
+            console.error('Keyboard key error: ', error);
         }
     });
 

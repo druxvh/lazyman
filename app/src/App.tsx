@@ -121,6 +121,10 @@ export default function App() {
     }, 100);
   };
 
+  const handleKeyboardKey = (key: "Esc" | "Enter") => {
+    socket.emit("keyboard-key", { key });
+  };
+
   const handleKeyboardSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
     if (typedText.trim() !== "") {
@@ -203,13 +207,26 @@ export default function App() {
               autoComplete="off"
               autoCapitalize="off"
             />
-            <div className="flex justify-between font-mono text-xs text-white/40">
-              <span>[Enter] to send</span>
+            <div className="mb-4 flex gap-2">
+              <button
+                onClick={() => handleKeyboardKey("Esc")}
+                className="flex-1 cursor-pointer border border-white/20 bg-white/5 py-2 font-mono text-xs text-white uppercase transition-all"
+              >
+                Esc
+              </button>
+              <button
+                onClick={() => handleKeyboardKey("Enter")}
+                className="flex-1 cursor-pointer border border-white/20 bg-white/5 py-2 font-mono text-xs text-white uppercase transition-all"
+              >
+                Enter
+              </button>
+            </div>
+            <div className="flex justify-end font-mono text-xs text-white/40">
               <span
                 onClick={() => setIsTypingActive(false)}
                 className="cursor-pointer hover:text-white"
               >
-                [Cancel]
+                [Close]
               </span>
             </div>
           </form>
