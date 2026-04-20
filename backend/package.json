@@ -20,7 +20,9 @@
   "license": "ISC",
   "scripts": {
     "start": "bun index.js",
-    "dev": "bun --watch index.js"
+    "dev": "bun --watch index.js",
+    "zip": "zip -r lazyman.zip . -x 'node_modules/*' '.git/*'"
   },
   "type": "module"
 }
+  
